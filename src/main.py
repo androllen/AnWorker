@@ -2,16 +2,19 @@
 # -*- coding: utf-8 -*-
 
 #Time: 2019/12/25 18:50:41
-#Author: androllen
 #Contact: androllen#hotmail.com
 
-from flask import Flask
+from src import log
 
-app = Flask(__name__)
+# app = Flask(__name__)
 
-@app.route('/')
-def root():
-   return "Hello world!"
+# @app.route('/')
+# def root():
+#    return "Hello world!"
+
+# if __name__ == "__main__":
+#   app.debug = True
+#   app.run()
 
 if __name__ == "__main__":
-  app.run()
+    pass
