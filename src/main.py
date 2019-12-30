@@ -4,7 +4,7 @@
 #Time: 2019/12/25 18:50:41
 #Contact: androllen#hotmail.com
 
-from src.app import Main
+from app import Main
 
 app = Main()
 
