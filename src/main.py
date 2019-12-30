@@ -4,17 +4,13 @@
 #Time: 2019/12/25 18:50:41
 #Contact: androllen#hotmail.com
 
-from src import log
+from src.app import Main
 
-# app = Flask(__name__)
+app = Main()
 
-# @app.route('/')
-# def root():
-#    return "Hello world!"
-
-# if __name__ == "__main__":
-#   app.debug = True
-#   app.run()
+@app.route('/')
+def root():
+   return "Hello world!"
 
 if __name__ == "__main__":
-    pass
+    app.run()
