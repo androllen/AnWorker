@@ -7,6 +7,9 @@
 
 [Pyhton 教程中文文档](https://docs.python.org/zh-cn/3/tutorial/classes.html)
 
+[Flask-Bootstrap 教程中文文档](https://flask-bootstrap-zh.readthedocs.io/zh/latest)
+
+[Jinja2中文文档](https://www.w3cschool.cn/yshfid/thlnsozt.html)
 
 ### for Windows
 ``` bash
