@@ -5,7 +5,9 @@ from app import log
 
 @bp.route('/')
 def index():
-    return render_template('main/index.html', title='Home')
+    data = [{"id": 10, "name": "中华古诗词"},
+            {"id": 11, "name": "成语大辞典"}]
+    return render_template('main/index.html', title='Home', tasklist=data)
 
 
 @bp.route('/about')

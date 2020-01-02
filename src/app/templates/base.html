@@ -9,7 +9,7 @@
 {% endblock %}
 
 {% block navbar %}
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default navbar-inverse" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
@@ -21,6 +21,13 @@
       </button>
       <a class="navbar-brand" href="{{ url_for('main.index') }}">Microblog</a>
     </div>
+    <div class="navbar-right">
+      <ul class="nav navbar-nav">
+        {% for item in tasklist %}
+        <li style="padding-left: 30px;"><a href="#">{{item.name}}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
   </div>
 </nav>
 {% endblock navbar %}
@@ -30,6 +37,7 @@
 <div class="container">
 
   {# application content needs to be provided in the app_content block #}
-  {% block app_content %}{% endblock %}
+  {% block app_content %}
+  {% endblock %}
 </div>
 {% endblock %}
