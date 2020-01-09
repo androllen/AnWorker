@@ -2,13 +2,20 @@
 
 {% block app_content %}
 
-<div class="card" style="border-radius:4px;background-color: transparent;">
-  <img src="https://hippiezhou.fun/static/images/wallpaper.jpg" class="card-img-top" alt="..." >
+<div style="margin-top: 50px;">
+
+</div>
+<div class="card text-center shadow rounded">
+  <img src="{{ url_for('static', filename='images/wallpaper.jpg') }}" class="card-img-top" alt="...">
   <div class="card-body">
+
     <h5 class="card-title">Card title</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
     </p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
+</div>
+<div style="margin-bottom: 50px;">
+
 </div>
 {% endblock %}

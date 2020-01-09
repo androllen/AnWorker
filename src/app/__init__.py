@@ -1,5 +1,4 @@
 from flask import Flask
-# from src import log as _log
 from .exts import log
 from .config import Config
 
@@ -11,6 +10,8 @@ def Main():
     from app.main import bp as main_bp
     app.register_blueprint(main_bp)
 
+    from app.menubar import bar as bar_bp
+    app.register_blueprint(bar_bp)
 
     log.logger.info('Microblog startup')
 

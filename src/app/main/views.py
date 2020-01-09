@@ -2,8 +2,8 @@ from flask import render_template, make_response, send_from_directory
 from app.main import bp
 from app import log
 
-
 @bp.route('/')
+@bp.route('/index')
 def index():
     data = [{"id": 10, "name": "中华古诗词"},
             {"id": 11, "name": "成语大辞典"}]
@@ -12,4 +12,5 @@ def index():
 
 @bp.route('/about')
 def about():
-    return render_template('main/about.html', title='About')
+    return render_template('main/about.html', title='about')
+

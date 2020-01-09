@@ -40,3 +40,6 @@ pip install flask
 # export a list of all installed packages
 pip freeze > requirements.txt
 ```
+
+[font-awesome](https://www.bootcss.com/p/font-awesome/#)
+[jQuery CDN ](https://code.jquery.com/)
