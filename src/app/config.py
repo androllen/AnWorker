@@ -5,8 +5,10 @@
 # Contact: androllen#hotmail.com
 
 
+
 class Config(object):
 
     DEBUG = True  # app.config["DEBUG"]
     MAIL = "androllen#hotmail.com"
     TITLE = "-Wiki"
+

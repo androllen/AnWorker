@@ -3,3 +3,5 @@ from flask import Blueprint
 splash = Blueprint('main', __name__)
 
 from app.main import views
+
+views.spider_bing()
