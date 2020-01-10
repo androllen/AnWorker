@@ -8,5 +8,4 @@ from app import Main
 app = Main()
 
 if __name__ == "__main__":
-    spider_bing()
     app.run()

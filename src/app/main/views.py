@@ -13,14 +13,17 @@ import urllib.parse
 import json
 from datetime import datetime
 
-from app.main import model
+from app.main.model import Bing
 
 
 @splash.route('/')
 def index():
     data = [{"id": 10, "name": "中华古诗词"},
             {"id": 11, "name": "成语大辞典"}]
-    return render_template('main/index.html', title='Home', tasklist=data)
+
+    bings = spider_bing()
+
+    return render_template('main/index.html', title='Home', tasklist=data, wallpaper=bings)
 
 
 @splash.route('/about/')
@@ -35,7 +38,7 @@ def spider_bing():
 
     params_json = {
         'format': 'js',
-        'idx': 0,
+        'idx': -1,
         'n': 1,
         'pid': 'hp',
         'mkt': 'en-US'
@@ -48,8 +51,11 @@ def spider_bing():
         data = json.loads(response.text)
         bings = data.get('images', None)
         for item in bings:
-            startdate = datetime.strptime(
-                item.get('fullstartdate', datetime.utcnow()), '%Y%m%d%H%M%S')
+            enddate = datetime.strptime(item.get('enddate'), '%Y%m%d')
+            startdate = datetime.strftime(enddate,'%Y-%m-%d')
             url = 'https://www.bing.com' + item.get('url', None)
             title = item.get('copyright', None)
-            wallpaper = model.Bing(url=url, title=title, pub_date=startdate)
+
+    wallpaper = Bing(url=url, title=title, pub_date=startdate)
+
+    return wallpaper
