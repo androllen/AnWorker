@@ -1,4 +1,4 @@
 from flask import Blueprint
-bar = Blueprint('menubar', __name__)
+bp = Blueprint('menubar', __name__)
 
-from app.menubar import bardict, barword
+from app.menubar import bardict, barword, soul, game

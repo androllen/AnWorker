@@ -1,25 +1,26 @@
 {% extends "base.html" %}
 
-{% block app_content %}
+{% block content %}
 
-<div style="margin-top: 50px;">
-
-</div>
 <div class="card text-center shadow rounded">
-  {% if wallpaper %}
-  <img src="{{ wallpaper.url }}" class="card-img-top" alt="...">
-  {% else %}
-  <img src="{{ url_for('static', filename='images/wallpaper.jpg') }}" class="card-img-top" alt="...">
-  {% endif %}
+  <div class="view overlay">
+    {% if wallpaper %}
+    <img src="{{ wallpaper.url }}" class="card-img-top" alt="...">
+    {% else %}
+    <img src="{{ url_for('static', filename='images/wallpaper.jpg') }}" class="card-img-top" alt="...">
+    {% endif %}
+    <a href="#">
+      <div class="mask rgba-white-slight waves-effect waves-light"></div>
+    </a>
+  </div>
 
   <div class="card-body">
 
     <h5 class="card-title">{{ wallpaper.title }}</h5>
     <p class="card-text">{{ wallpaper.pub_date }}</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <a href="#" class="btn btn-default">Go somewhere</a>
   </div>
 </div>
-<div style="margin-bottom: 50px;">
 
-</div>
+
 {% endblock %}

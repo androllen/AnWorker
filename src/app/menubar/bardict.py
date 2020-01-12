@@ -7,9 +7,9 @@
 
 from flask import render_template, make_response, send_from_directory
 from app import log
-from app.menubar import bar
+from app.menubar import bp
 
 
-@bar.route('/dict')
+@bp.route('/dict')
 def bar_dict():
     return render_template('menubar/bar_dict.html', title='bar_dict')

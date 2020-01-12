@@ -10,10 +10,10 @@ def Main():
     app.config.from_object(Config)
     
     # 从根目录app文件夹下的 main 蓝图 导入 蓝图对象
-    from app.main import splash as main_bp
+    from app.main import bp as main_bp
     app.register_blueprint(main_bp)
 
-    from app.menubar import bar as bar_bp
+    from app.menubar import bp as bar_bp
     app.register_blueprint(bar_bp)
 
     log.logger.info('Microblog startup')

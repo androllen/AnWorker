@@ -4,8 +4,8 @@
 # Time: 2020/01/10 15:41:21
 # Contact: androllen#hotmail.com
 
-from flask import render_template, make_response, send_from_directory
-from app.main import splash
+from flask import render_template, make_response, send_from_directory, redirect, url_for, request
+from app.main import bp
 from app import log
 import requests
 import urllib.request
@@ -16,7 +16,7 @@ from datetime import datetime
 from app.main.model import Bing
 
 
-@splash.route('/')
+@bp.route('/')
 def index():
     data = [{"id": 10, "name": "中华古诗词"},
             {"id": 11, "name": "成语大辞典"}]
@@ -26,7 +26,7 @@ def index():
     return render_template('main/index.html', title='Home', tasklist=data, wallpaper=bings)
 
 
-@splash.route('/about/')
+@bp.route('/about/', methods=['POST', 'GET'])
 def about():
     return render_template('main/about.html', title='about')
 
@@ -52,7 +52,7 @@ def spider_bing():
         bings = data.get('images', None)
         for item in bings:
             enddate = datetime.strptime(item.get('enddate'), '%Y%m%d')
-            startdate = datetime.strftime(enddate,'%Y-%m-%d')
+            startdate = datetime.strftime(enddate, '%Y-%m-%d')
             url = 'https://www.bing.com' + item.get('url', None)
             title = item.get('copyright', None)
 
