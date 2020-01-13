@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="row align-items-center justify-content-center" style="height: 75vh;">
+  <div class="text-center">
+    <h4 id="content" class="font-weight-bold my-5">{{ message }}</h4>
+    <a id="soulapi" class="btn btn-default">再来一碗</a>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block script %}
+<script>
+  $(document).ready(function () {
+    $("#soulapi").click(function () {
+      $.get("/getdata", function (data) {
+        $("#content").text(data)
+      });
+    });
+  });
+</script>
+{% endblock  %}

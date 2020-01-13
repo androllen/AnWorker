@@ -1,7 +1,7 @@
 # AnWorker
 
 ### 学习来源:
-[ Flask 教程 ](http://docs.jinkan.org/docs/flask/)
+[Flask 教程](http://docs.jinkan.org/docs/flask/)
 
 [安装 Python 虚拟环境](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)
 
@@ -9,8 +9,10 @@
 
 [Flask-Bootstrap 教程中文文档](https://flask-bootstrap-zh.readthedocs.io/zh/latest)
 
-[Jinja2中文文档](https://www.w3cschool.cn/yshfid/thlnsozt.html)
-[Jinja2英文文档](https://jinja.palletsprojects.com/en/2.10.x/)
+[Jinja2 中文文档](https://www.w3cschool.cn/yshfid/thlnsozt.html)
+[Jinja2 英文文档](https://jinja.palletsprojects.com/en/2.10.x/)
+
+[Bootstrap 英文文档](https://getbootstrap.com/)
 
 ### for Windows
 ``` bash

@@ -17,8 +17,14 @@ class Logger(object):
         'crit': logging.CRITICAL
     }
 
-    def __init__(self, filename, level='info', when='D', backCount=3,
-                 fmt='%(asctime)s - %(pathname)s[line:%(lineno)d] - %(levelname)s: %(message)s'):
+    def __init__(
+        self,
+        filename,
+        level='info',
+        when='D',
+        backCount=3,
+        fmt='%(asctime)s - %(pathname)s[line:%(lineno)d] - %(levelname)s: %(message)s'
+    ):
         self.logger = logging.getLogger(filename)
         format_str = logging.Formatter(fmt)  # 设置日志格式
         self.logger.setLevel(self.level_relations.get(level))  # 设置日志级别
@@ -26,7 +32,10 @@ class Logger(object):
         # 往文件里写入
         # 指定间隔时间自动生成文件的处理器
         timed_rotating_file_handler = handlers.TimedRotatingFileHandler(
-            filename=filename, when=when, backupCount=backCount, encoding='utf-8')
+            filename=filename,
+            when=when,
+            backupCount=backCount,
+            encoding='utf-8')
 
         # 实例化TimedRotatingFileHandler
         # interval是时间间隔，backupCount是备份文件的个数，如果超过这个个数，就会自动删除，when是间隔的时间单位，单位有以下几种：
