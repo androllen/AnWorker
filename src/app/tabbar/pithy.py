@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# https://blog.csdn.net/auserbb/article/details/80003381
-# Time: 2020/01/10 15:41:00
+# 
+# Time: 2020/01/15 15:58:52
 # Contact: androllen#hotmail.com
 
 from flask import render_template, make_response, send_from_directory
@@ -10,6 +10,6 @@ from app.tabbar import bp
 from app.config import Config
 
 
-@bp.route('/dict')
-def bar_dict():
-    return render_template('tabbar/bar_dict.html', title='bar_dict', tasklist=Config.TabBar)
+@bp.route('/pithy')
+def pithy():
+    return render_template('tabbar/pithy.html', title='pithy', tasklist=Config.TabBar)
