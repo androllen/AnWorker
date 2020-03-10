@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # http://docs.jinkan.org/docs/flask/config.html
+# http://www.pythondoc.com/flask-sqlalchemy/config.html
 # Time: 2019/12/30 16:59:17
 # Contact: androllen#hotmail.com
 import os
@@ -12,6 +13,15 @@ class Config(object):
     DEBUG = True  # app.config["DEBUG"]
     EMAIL = "androllen#hotmail.com"
     TITLE = "-Wiki"
+
+    # 数据库链接地址
+    SQLALCHEMY_DATABASE_URI = 'mysql://root:mysql@127.0.0.1:3306/anworkdb'
+
+    # 禁用追踪
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+
+    #查询时会显示原始SQL语句
+    SQLALCHEMY_ECHO = True
 
     APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 
