@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-#
+# https://spoprod-a.akamaihd.net/files/odsp-next-prod-amd_2020-03-06_20200316.004/odsp-media/images/error/error2.svg
 # Time: 2020/03/10 12:35:13
 # Contact: androllen#hotmail.com
 

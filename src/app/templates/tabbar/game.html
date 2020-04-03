@@ -1,6 +1,40 @@
 {% extends "base.html" %}
 
 {% block content %}
-<p>hello game</p>
+<!-- <p>hello game</p> -->
 
+  <div id="map"  style="width: 1000px; height: 700px"></div>
+
+{% endblock %}
+
+{% block script %}
+  <script>
+    $(function () {
+      $('#map').vectorMap(
+          {
+           map: 'cn_merc' 
+          },
+          {
+            initial: {
+              fill: 'grey',
+              stroke: '#505050',
+              "fill-opacity": 1,
+              "stroke-width": 1,
+              "stroke-opacity": 1,
+              r: 5
+            },
+            hover: {
+              stroke: 'black',
+              "stroke-width": 2,
+              cursor: 'pointer'
+            },
+            selected: {
+              fill: 'blue'
+            },
+            selectedHover: {
+            }
+          }
+        );
+    });
+  </script>
 {% endblock %}
