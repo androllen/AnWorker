@@ -5,6 +5,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
 
+# 生成 app
 def Main():
     # app 是 Flask 类的实例
     app = Flask(__name__, instance_relative_config=True)

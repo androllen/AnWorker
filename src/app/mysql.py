@@ -6,14 +6,17 @@
 
 from app import db
 
+
 class Bing(db.Model):
   # 设置表名
     __tablename__ = 'bing'
+
   # 设置为主键之后，自动自增长
-    id = db.Column(db.Integer, primary_key=True)
-    url = db.Column(db.String(20), unique=True, nullable=False)
+    id = db.Column(db.Integer, primary_key=True, unique=True)
+    url = db.Column(db.String(20), nullable=False)
     title = db.Column(db.Text, nullable=True)
-    pub_date = db.Column(db.String(), nullable=True)
+    pub_date = db.Column(db.Text, nullable=True)
+    timestamp = db.Column(db.Text, nullable=True)
 
     def __repr__(self):
         return self.name

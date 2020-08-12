@@ -6,7 +6,9 @@
 
 
 class Bing():
-    def __init__(self, url, title, pub_date):
+
+    def __init__(self, url, title, pub_date, timestamp):
         self.url = url
         self.title = title
         self.pub_date = pub_date
+        self.timestamp = timestamp

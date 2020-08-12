@@ -5,5 +5,7 @@
 # Contact: androllen#hotmail.com
 
 from .log import Logger
+import  os
 
-log = Logger("all.log", level='debug')
+_filename = os.path.join(os.getcwd(), 'logs', 'all.log')
+log = Logger(level='debug', filename=_filename)

@@ -49,6 +49,7 @@ class Logger(object):
         self.logger.addHandler(timed_rotating_file_handler)
 
         # 往屏幕上输出
-        stream_handler = logging.StreamHandler()
-        stream_handler.setFormatter(format_str)
-        self.logger.addHandler(stream_handler)
+        # stream_handler = logging.StreamHandler()
+        # stream_handler.setFormatter(format_str)
+        # self.logger.addHandler(stream_handler)
+        
