@@ -1,9 +1,6 @@
 from flask import Flask
-from .exts import log
+from .exts import log, db
 from .config import Config
-from flask_sqlalchemy import SQLAlchemy
-
-db = SQLAlchemy()
 
 # 生成 app
 def Main():

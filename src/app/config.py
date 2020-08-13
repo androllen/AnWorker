@@ -10,20 +10,23 @@ import json
 
 class Config(object):
 
+    APP_ROOT = os.path.dirname(os.path.abspath(__file__))
     DEBUG = True  # app.config["DEBUG"]
     EMAIL = "androllen#hotmail.com"
     TITLE = "-Wiki"
 
     # 数据库链接地址
-    SQLALCHEMY_DATABASE_URI = 'mysql://root:mysql@127.0.0.1:3306/anworkdb'
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///' + \
+        os.path.join(os.path.dirname(APP_ROOT), 'hots.db')
 
     # 禁用追踪
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+    SQLALCHEMY_COMMIT_ON_TEARDOWN=True
+    SQLALCHEMY_TRACK_MODIFICATIONS=True
 
     #查询时会显示原始SQL语句
     SQLALCHEMY_ECHO = True
 
-    APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 
     TabBar = [{
         "id": 3,
@@ -52,7 +55,7 @@ class Config(object):
     }]
 
     # TabPithy =
-    def tabPithy():
+    def tabPithy(self):
         content = None
         file = APP_ROOT
         with open(os.path.join(APP_ROOT, 'static/json/pithy.json'), 'r', encoding='utf-8') as file:

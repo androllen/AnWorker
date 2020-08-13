@@ -29,23 +29,21 @@ def spider_bing():
 
     params = urllib.parse.urlencode(params_json)
     try:
-      response = requests.get(bingURL, params=params, headers=headers)
+        response = requests.get(bingURL, params=params, headers=headers)
 
-      if response.status_code == 200:
-          data = json.loads(response.text)
-          bings = data.get('images', None)
+        if response.status_code == 200:
+            data = json.loads(response.text)
+            bings = data.get('images', None)
 
-          for item in bings:
-              enddate = datetime.strptime(item.get('enddate'), '%Y%m%d')
-              startdate = datetime.strftime(enddate, '%Y-%m-%d')
-              url = 'https://www.bing.com' + item.get('url', None)
-              title = item.get('copyright', None)
+            for item in bings:
+                enddate = datetime.strptime(item.get('enddate'), '%Y%m%d')
+                startdate = datetime.strftime(enddate, '%Y-%m-%d')
+                url = 'https://www.bing.com' + item.get('url', None)
+                title = item.get('copyright', None)
 
+        model = Bing(url=url, title=title, pub_date=startdate).insert()
 
-      wallpaper = Bing(url=url, title=title, pub_date=startdate)
     except Exception as e:
-        wallpaper=json.dumps()
         print(e)
 
-
-    return wallpaper
+    return model
