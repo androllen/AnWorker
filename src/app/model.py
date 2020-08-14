@@ -22,7 +22,7 @@ class Bing(db.Model):
 
     def __repr__(self):
         return 'Bing %r' % self.id
-        
+
     def insert(self):
         try:
             model = Bing.query.filter(Bing.pub_date == self.pub_date).first()
@@ -37,3 +37,7 @@ class Bing(db.Model):
             log.logger.critical("exception %s", ex.message)
         finally:
             return model
+
+    def allmodel(self):
+        model = Bing.query.all()
+        return model

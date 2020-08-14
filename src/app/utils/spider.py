@@ -47,3 +47,8 @@ def spider_bing():
         print(e)
 
     return model
+
+
+def get_bings():
+    model = Bing().allmodel()
+    return model

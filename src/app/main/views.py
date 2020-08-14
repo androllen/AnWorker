@@ -9,7 +9,7 @@ from app import log
 from app.utils import spider
 from app.main import bp
 from app.config import Config
-
+from app.exts import log
 
 @bp.route('/')
 def index():
@@ -27,3 +27,10 @@ def index():
 @bp.route('/about/', methods=['POST', 'GET'])
 def about():
     return render_template('main/about.html', title='about', tasklist=Config.TabBar)
+
+@bp.route('/bings', methods=['GET'])
+def bings():
+    log.logger.debug('requestMethod= % s', request.method)
+    if request.method == "GET":
+        paper = spider.get_bings()
+        return render_template('main/bings.html', title='bings', paper=paper)
