@@ -7,6 +7,33 @@
 
 {% block content %}
 <div class="album py-5">
+  <ul id="images" class="container">
+    <li class="row">
+      {% for wallpaper in paper %}
+      <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+          {% if wallpaper %}
+          <img id="viewer" src="{{ wallpaper.url }}" class="card-img-top" alt="..." href=''>
+          {% else %}
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#55595c"></rect>
+            <text x="50%" y="50%" fill="#eceeef" dy=".3em">正在加载...</text>
+          </svg>
+          {% endif %}
+      
+          <div class="card-body">
+            <p class="card-text">{{ wallpaper.title }}</p>
+            <p class="card-text">{{ wallpaper.pub_date }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </li>
+  </ul>
+</div>
+<!-- <div class="album py-5">
   <div class="container">
 
     <div class="row">
@@ -33,7 +60,7 @@
       {% endfor %}
     </div>
   </div>
-</div>
+</div> -->
 {% endblock  %}
 
 {% block script %}
@@ -41,16 +68,7 @@
 </script>
 <script type="text/javascript">
   $('#viewer').click(function () {
-    const viewer = new Viewer(document.getElementById('viewer'), {
-      inline: false,
-      navbar: false,
-      button: true,
-      title: false,
-      keyboard: false,
-      viewed() {
-        viewer.zoomTo(0.3);
-      },
-    });
+    const gallery = new Viewer(document.getElementById('images'));
   });
 
 
