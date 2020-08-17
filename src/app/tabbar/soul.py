@@ -17,7 +17,7 @@ def soul():
     if '127.0.0.1' not in str(request.referrer):
         abort(403)
     else:
-        msg = souler.soul()
+        msg = getdata()
 
     return render_template('tabbar/soul.html', title='soul', tasklist=Config.TabBar, message=msg)
 
@@ -25,3 +25,9 @@ def soul():
 @bp.route('/static/json/soul.json')
 def not_allowed():
     abort(403)
+
+
+@bp.route('/getdata')
+def getdata():
+    msg = souler.soul()
+    return msg
