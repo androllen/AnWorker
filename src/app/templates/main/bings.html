@@ -13,7 +13,9 @@
       <div class="col-md-4">
         <div class="card mb-4 shadow-sm">
           {% if wallpaper %}
-          <img id="viewer" src="{{ wallpaper.url }}" class="card-img-top" alt="..." href=''>
+          <div class="mask rgba-white-slight waves-effect waves-light">
+            <img id="viewer" src="{{ wallpaper.url }}" class="card-img-top" alt="...">
+          </div>
           {% else %}
           <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
             preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
@@ -33,44 +35,16 @@
     </li>
   </ul>
 </div>
-<!-- <div class="album py-5">
-  <div class="container">
-
-    <div class="row">
-      {% for wallpaper in paper %}
-      <div class="col-md-4">
-        <div class="card mb-4 shadow-sm">
-          {% if wallpaper %}
-          <img id="viewer" src="{{ wallpaper.url }}" class="card-img-top" alt="..." href=''>
-          {% else %}
-          <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#55595c"></rect>
-            <text x="50%" y="50%" fill="#eceeef" dy=".3em">正在加载...</text>
-          </svg>
-          {% endif %}
-
-          <div class="card-body">
-            <p class="card-text">{{ wallpaper.title }}</p>
-            <p class="card-text">{{ wallpaper.pub_date }}</p>
-          </div>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</div> -->
 {% endblock  %}
 
 {% block script %}
 <script src="https://cdn.bootcdn.net/ajax/libs/viewerjs/1.6.1/viewer.min.js" type="text/javascript" charset="utf-8">
 </script>
-<script type="text/javascript">
-  $('#viewer').click(function () {
-    const gallery = new Viewer(document.getElementById('images'));
-  });
+<script src="/static/js/jquery-viewer.js"></script>
 
+<script type="text/javascript">
+
+  $('#images').viewer();
 
 </script>
 {% endblock %}
