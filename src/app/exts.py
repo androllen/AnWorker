@@ -9,4 +9,4 @@ from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
 
-log = Logger(level='debug', filename=_filename)
+log = Logger(level='debug')

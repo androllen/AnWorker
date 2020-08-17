@@ -20,7 +20,6 @@ class Logger(object):
 
     def __init__(
         self,
-        filename,
         level='info',
         when='D',
         backCount=3,
@@ -31,14 +30,14 @@ class Logger(object):
         if not os.path.exists(_ndir):
             os.makedirs(_ndir)
 
-        self.logger = logging.getLogger(filename)
+        self.logger = logging.getLogger(_filename)
         format_str = logging.Formatter(fmt)  # 设置日志格式
         self.logger.setLevel(self.level_relations.get(level))  # 设置日志级别
 
         # 往文件里写入
         # 指定间隔时间自动生成文件的处理器
         timed_rotating_file_handler = handlers.TimedRotatingFileHandler(
-            filename=filename,
+            filename=_filename,
             when=when,
             backupCount=backCount,
             encoding='utf-8')
