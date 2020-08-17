@@ -4,6 +4,7 @@
 
 # Time: 2019/12/30 10:59:50
 # Contact: androllen#hotmail.com
+import os
 import logging
 from logging import handlers
 
@@ -25,6 +26,11 @@ class Logger(object):
         backCount=3,
         fmt='%(asctime)s - %(pathname)s[line:%(lineno)d] - %(levelname)s: %(message)s'
     ):
+        _ndir = os.path.join(os.getcwd(), 'logs')
+        _filename = os.path.join(_ndir, 'all.log')
+        if not os.path.exists(_ndir):
+            os.makedirs(_ndir)
+
         self.logger = logging.getLogger(filename)
         format_str = logging.Formatter(fmt)  # 设置日志格式
         self.logger.setLevel(self.level_relations.get(level))  # 设置日志级别
@@ -52,4 +58,3 @@ class Logger(object):
         # stream_handler = logging.StreamHandler()
         # stream_handler.setFormatter(format_str)
         # self.logger.addHandler(stream_handler)
-        
