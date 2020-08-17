@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block head %}
-<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/viewerjs/1.6.1/viewer.min.css" type="text/css"/>
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/viewerjs/1.6.1/viewer.min.css" type="text/css" />
 <link rel="stylesheet" href="/static/css/layout.css" type="text/css" media="screen" />
 {% endblock %}
 
@@ -14,7 +14,7 @@
       <div class="col-md-4">
         <div class="card mb-4 shadow-sm">
           {% if wallpaper %}
-          <img id="image" data-original="{{ wallpaper.url }}" src="{{ wallpaper.url }}" class="card-img-top" alt="..." href=''>
+          <img id="viewer" src="{{ wallpaper.url }}" class="card-img-top" alt="..." href=''>
           {% else %}
           <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
             preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
@@ -37,22 +37,22 @@
 {% endblock  %}
 
 {% block script %}
-<script src="https://cdn.bootcdn.net/ajax/libs/viewerjs/1.6.1/viewer.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/viewerjs/1.6.1/viewer.min.js" type="text/javascript" charset="utf-8">
+</script>
 <script type="text/javascript">
-  // You should import the CSS file.
-  // import 'viewerjs/dist/viewer.css';
-  import Viewer from 'viewerjs';
-  // View an image
-  const viewer = new Viewer(document.getElementById('image'), {
-    inline: true,
-    url: 'data-original',
-    navbar: false,
-    button: true,
-    title: false,
-    keyboard: false,    
-    viewed() {
-      viewer.zoomTo(1);
-    },
+  $('#viewer').click(function () {
+    const viewer = new Viewer(document.getElementById('viewer'), {
+      inline: false,
+      navbar: false,
+      button: true,
+      title: false,
+      keyboard: false,
+      viewed() {
+        viewer.zoomTo(0.3);
+      },
+    });
   });
+
+
 </script>
 {% endblock %}
