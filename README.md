@@ -44,5 +44,11 @@ pip install flask
 pip freeze > requirements.txt
 ```
 
+### start
+
+```sh
+py server.py
+```
+
 [font-awesome](https://www.bootcss.com/p/font-awesome/#)
 [jQuery CDN ](https://code.jquery.com/)

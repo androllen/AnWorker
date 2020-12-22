@@ -30,8 +30,8 @@ class Config(object):
 
     TabBar = [{
         "id": 3,
-        "title": "游戏",
-        "url": "/game"
+        "title": "足迹",
+        "url": "/map"
     }, {
         "id": 4,
         "title": "鸡汤",

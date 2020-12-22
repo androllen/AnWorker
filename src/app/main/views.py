@@ -4,7 +4,7 @@
 # Time: 2020/01/10 15:41:21
 # Contact: androllen#hotmail.com
 
-from flask import render_template, make_response, send_from_directory, redirect, url_for, request
+from flask import render_template, request
 from app import log
 from app.utils import spider
 from app.main import bp
