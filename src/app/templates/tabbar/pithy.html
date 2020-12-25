@@ -1,204 +1,186 @@
 {% extends "base.html" %}
 
+{% block head %}
+<!-- <link rel="stylesheet" href="/static/css/layout.css" type="text/css" /> -->
+<!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}"> -->
+<!-- https://chengyu.911cha.com/ -->
+<style>
+  .cart-font{
+  font-size: 14px;
+  padding: 10px;
+  text-indent: 0;
+}
+p{
+  line-height: 24px;
+}
+span.tt, span.tt a {
+    display: inline-block;
+    width: 65px;
+    color: #008000;
+    text-decoration: none;
+}
+
+a{
+  color: #333;
+  outline: none;
+}
+</style>
+{% endblock %}
+
 {% block content %}
 
-<div class="album py-5">
-  <div class="container">
-
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card mb-4 shadow-sm">
-          <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
-              dy=".3em">成语大辞典</text>
-          </svg>
-          <div class="card-body">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-              content. This content is a little bit longer.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-              </div>
-              <small class="text-muted">9 mins</small>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card mb-4 shadow-sm">
-          <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
-              dy=".3em">Thumbnail</text>
-          </svg>
-          <div class="card-body">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-              content. This content is a little bit longer.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-              </div>
-              <small class="text-muted">9 mins</small>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card mb-4 shadow-sm">
-          <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
-              dy=".3em">Thumbnail</text>
-          </svg>
-          <div class="card-body">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-              content. This content is a little bit longer.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-              </div>
-              <small class="text-muted">9 mins</small>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card mb-4 shadow-sm">
-          <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
-              dy=".3em">Thumbnail</text>
-          </svg>
-          <div class="card-body">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-              content. This content is a little bit longer.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-              </div>
-              <small class="text-muted">9 mins</small>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card mb-4 shadow-sm">
-          <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
-              dy=".3em">Thumbnail</text>
-          </svg>
-          <div class="card-body">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-              content. This content is a little bit longer.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-              </div>
-              <small class="text-muted">9 mins</small>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card mb-4 shadow-sm">
-          <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
-              dy=".3em">Thumbnail</text>
-          </svg>
-          <div class="card-body">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-              content. This content is a little bit longer.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-              </div>
-              <small class="text-muted">9 mins</small>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card mb-4 shadow-sm">
-          <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
-              dy=".3em">Thumbnail</text>
-          </svg>
-          <div class="card-body">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-              content. This content is a little bit longer.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-              </div>
-              <small class="text-muted">9 mins</small>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card mb-4 shadow-sm">
-          <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
-              dy=".3em">Thumbnail</text>
-          </svg>
-          <div class="card-body">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-              content. This content is a little bit longer.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-              </div>
-              <small class="text-muted">9 mins</small>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card mb-4 shadow-sm">
-          <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
-              dy=".3em">Thumbnail</text>
-          </svg>
-          <div class="card-body">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-              content. This content is a little bit longer.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-              </div>
-              <small class="text-muted">9 mins</small>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="cart-font">
+  <p>成语大全(成语词典在线查询)收录四字成语等4万多条，提供成语解释、成语用法、成语出处、成语歇后语、成语谜语、成语故事大全、成语接龙、近义词、反义词等查询。</p>
+  <p><a href="./list_2.html">牛年成语</a> <a href="./miyu.html">成语谜语</a> <a href="./xiehouyu.html">成语歇后语</a> <a
+      href="./gushi.html">成语故事</a> <a href="./jielong.html">成语接龙</a></p>
+  <p><span class="tt">生肖成语</span><a href="./list_1.html">鼠</a> <a href="./list_2.html">牛</a> <a
+      href="./list_3.html">虎</a> <a href="./list_4.html">兔</a> <a href="./list_5.html">龙</a> <a
+      href="./list_6.html">蛇</a> <a href="./list_7.html">马</a> <a href="./list_8.html">羊</a> <a
+      href="./list_9.html">猴</a> <a href="./list_10.html">鸡</a> <a href="./list_11.html">狗</a> <a
+      href="./list_12.html">猪</a> </p>
+  <p><span class="tt">四季成语</span><a href="./list_13.html">春天</a> <a href="./list_14.html">夏天</a> <a
+      href="./list_15.html">秋天</a> <a href="./list_16.html">冬天</a> </p>
+  <p><span class="tt">数字成语</span><a href="./list_17.html">一</a> <a href="./list_18.html">二</a> <a
+      href="./list_19.html">三</a> <a href="./list_20.html">四</a> <a href="./list_21.html">五</a> <a
+      href="./list_22.html">六</a> <a href="./list_23.html">七</a> <a href="./list_24.html">八</a> <a
+      href="./list_25.html">九</a> <a href="./list_26.html">十</a> <a href="./list_27.html">百</a> <a
+      href="./list_28.html">千</a> <a href="./list_29.html">万</a> <a href="./list_30.html">亿</a> <a
+      href="./list_31.html">数</a> </p>
+  <p><span class="tt">动物成语</span><a href="./list_32.html">狼</a> <a href="./list_33.html">熊</a> <a
+      href="./list_34.html">猫</a> <a href="./list_35.html">鹿</a> <a href="./list_36.html">鱼</a> <a
+      href="./list_37.html">猴子</a> <a href="./list_38.html">鹅</a> <a href="./list_39.html">大象</a> <a
+      href="./list_40.html">鸭</a> <a href="./list_41.html">鸡</a> <a href="./list_42.html">豹</a> <a
+      href="./list_43.html">驴</a> <a href="./list_44.html">蚂蚁</a> <a href="./list_45.html">蛇</a> <a
+      href="./list_46.html">乌龟</a> <a href="./list_47.html">猿猴</a> <a href="./list_48.html">凤凰</a> <a
+      href="./list_49.html">鸟</a> <a href="./list_50.html">仙鹤</a> <a href="./list_51.html">鹰</a> <a
+      href="./list_52.html">蜜蜂</a> <a href="./list_220.html">狮子</a> <a href="./list_221.html">狐狸</a> <a
+      href="./list_222.html">狸猫</a> <a href="./list_223.html">貂</a> <a href="./list_224.html">豺</a> <a
+      href="./list_225.html">狈</a> <a href="./list_226.html">犀牛</a> <a href="./list_227.html">燕子</a> <a
+      href="./list_228.html">麻雀</a> <a href="./list_229.html">乌鸦</a> <a href="./list_230.html">鸥</a> <a
+      href="./list_231.html">大雁</a> <a href="./list_232.html">雕</a> <a href="./list_233.html">鸠</a> <a
+      href="./list_234.html">喜鹊</a> <a href="./list_235.html">鹑</a> <a href="./list_236.html">蝉</a> <a
+      href="./list_237.html">蝴蝶</a> <a href="./list_238.html">蛾</a> <a href="./list_239.html">蚕</a> <a
+      href="./list_240.html">蚊子</a> <a href="./list_241.html">虱子</a> <a href="./list_242.html">虾</a> <a
+      href="./list_243.html">鳖</a> <a href="./list_244.html">螃蟹</a> <a href="./list_245.html">贝壳</a> <a
+      href="./list_246.html">蚌</a> <a href="./list_247.html">鲸鱼</a> <a href="./list_248.html">蜗牛</a> <a
+      href="./list_249.html">蝎子</a> </p>
+  <p><span class="tt">植物成语</span><a href="./list_193.html">花</a> <a href="./list_194.html">草</a> <a
+      href="./list_195.html">树</a> <a href="./list_196.html">木</a> <a href="./list_197.html">瓜</a> <a
+      href="./list_198.html">果</a> <a href="./list_199.html">松树</a> <a href="./list_200.html">柏树</a> <a
+      href="./list_201.html">杨树</a> <a href="./list_202.html">柳树</a> <a href="./list_203.html">桑树</a> <a
+      href="./list_204.html">榆树</a> <a href="./list_205.html">槐树</a> <a href="./list_206.html">梧桐</a> <a
+      href="./list_207.html">桃</a> <a href="./list_208.html">李</a> <a href="./list_209.html">杏</a> <a
+      href="./list_210.html">梨</a> <a href="./list_211.html">枣</a> <a href="./list_212.html">麦</a> <a
+      href="./list_213.html">茶</a> <a href="./list_214.html">梅花</a> <a href="./list_215.html">兰花</a> <a
+      href="./list_216.html">荷花</a> <a href="./list_217.html">竹子</a> <a href="./list_218.html">桂花</a> <a
+      href="./list_219.html">莲花</a> </p>
+  <p><span class="tt">颜色成语</span><a href="./list_53.html">红色</a> <a href="./list_54.html">橙色</a> <a
+      href="./list_55.html">黄色</a> <a href="./list_56.html">绿色</a> <a href="./list_57.html">青色</a> <a
+      href="./list_58.html">蓝色</a> <a href="./list_59.html">紫色</a> <a href="./list_60.html">黑色</a> <a
+      href="./list_61.html">白色</a> <a href="./list_62.html">灰色</a> <a href="./list_63.html">粉色</a> </p>
+  <p><span class="tt">方位成语</span><a href="./list_64.html">东方</a> <a href="./list_65.html">南方</a> <a
+      href="./list_66.html">西方</a> <a href="./list_67.html">北方</a> <a href="./list_68.html">上边</a> <a
+      href="./list_69.html">下边</a> <a href="./list_70.html">左边</a> <a href="./list_71.html">右边</a> <a
+      href="./list_72.html">前面</a> <a href="./list_73.html">后面</a> <a href="./list_74.html">里面</a> <a
+      href="./list_75.html">外面</a> <a href="./list_76.html">顶部</a> <a href="./list_77.html">底部</a> <a
+      href="./list_78.html">中间</a> <a href="./list_79.html">内部</a> <a href="./list_80.html">旁边</a> </p>
+  <p><span class="tt">味道成语</span><a href="./list_81.html">酸味</a> <a href="./list_82.html">甜味</a> <a
+      href="./list_83.html">苦味</a> <a href="./list_84.html">辣味</a> <a href="./list_85.html">咸味</a> <a
+      href="./list_86.html">淡味</a> <a href="./list_87.html">香味</a> <a href="./list_88.html">臭味</a> </p>
+  <p><span class="tt">武器成语</span><a href="./list_89.html">刀</a> <a href="./list_90.html">枪</a> <a
+      href="./list_91.html">剑</a> <a href="./list_92.html">戟</a> <a href="./list_93.html">斧</a> <a
+      href="./list_94.html">钺</a> <a href="./list_95.html">叉</a> <a href="./list_96.html">鞭</a> <a
+      href="./list_97.html">锏</a> <a href="./list_98.html">锤</a> <a href="./list_99.html">戈</a> <a
+      href="./list_100.html">棍</a> <a href="./list_101.html">槊</a> <a href="./list_102.html">棒</a> <a
+      href="./list_103.html">矛</a> <a href="./list_104.html">弓</a> <a href="./list_105.html">箭</a> <a
+      href="./list_106.html">弩</a> <a href="./list_107.html">匕</a> <a href="./list_108.html">盾</a> </p>
+  <p><span class="tt">身体成语</span><a href="./list_109.html">心</a> <a href="./list_110.html">肝</a> <a
+      href="./list_111.html">脾</a> <a href="./list_112.html">肺</a> <a href="./list_113.html">肾</a> <a
+      href="./list_114.html">眉</a> <a href="./list_115.html">眼</a> <a href="./list_116.html">耳</a> <a
+      href="./list_117.html">鼻</a> <a href="./list_118.html">口</a> <a href="./list_119.html">胃</a> <a
+      href="./list_120.html">肠</a> <a href="./list_121.html">胆</a> <a href="./list_122.html">肚</a> <a
+      href="./list_123.html">腑</a> <a href="./list_124.html">头</a> <a href="./list_125.html">脸</a> <a
+      href="./list_126.html">面</a> <a href="./list_127.html">颊</a> <a href="./list_128.html">嘴</a> <a
+      href="./list_129.html">唇</a> <a href="./list_130.html">牙</a> <a href="./list_131.html">齿</a> <a
+      href="./list_132.html">喉</a> <a href="./list_133.html">舌</a> <a href="./list_134.html">肩</a> <a
+      href="./list_135.html">颈</a> <a href="./list_136.html">胸</a> <a href="./list_137.html">背</a> <a
+      href="./list_138.html">手</a> <a href="./list_139.html">臂</a> <a href="./list_140.html">腰</a> <a
+      href="./list_141.html">腹</a> <a href="./list_142.html">膝</a> <a href="./list_143.html">肘</a> <a
+      href="./list_144.html">腿</a> <a href="./list_145.html">脚</a> <a href="./list_146.html">掌</a> <a
+      href="./list_147.html">腕</a> <a href="./list_148.html">腋</a> <a href="./list_149.html">趾</a> <a
+      href="./list_150.html">肋</a> <a href="./list_151.html">皮</a> <a href="./list_152.html">肤</a> <a
+      href="./list_153.html">目</a> <a href="./list_154.html">足</a> <a href="./list_155.html">骨</a> <a
+      href="./list_156.html">肉</a> </p>
+  <p><span class="tt">自然成语</span><a href="./list_157.html">金</a> <a href="./list_158.html">木</a> <a
+      href="./list_159.html">水</a> <a href="./list_160.html">火</a> <a href="./list_161.html">土</a> <a
+      href="./list_162.html">石</a> <a href="./list_163.html">天</a> <a href="./list_164.html">地</a> <a
+      href="./list_165.html">日</a> <a href="./list_166.html">月</a> <a href="./list_167.html">星</a> <a
+      href="./list_168.html">光</a> <a href="./list_169.html">江</a> <a href="./list_170.html">河</a> <a
+      href="./list_171.html">湖</a> <a href="./list_172.html">海</a> <a href="./list_173.html">田</a> <a
+      href="./list_174.html">泉</a> <a href="./list_175.html">风</a> <a href="./list_176.html">霜</a> <a
+      href="./list_177.html">雨</a> <a href="./list_178.html">雪</a> <a href="./list_179.html">雷</a> <a
+      href="./list_180.html">电</a> <a href="./list_181.html">山</a> <a href="./list_182.html">岭</a> <a
+      href="./list_183.html">崖</a> <a href="./list_184.html">谷</a> <a href="./list_185.html">丘</a> <a
+      href="./list_186.html">岩</a> <a href="./list_187.html">云</a> <a href="./list_188.html">雾</a> <a
+      href="./list_189.html">浪</a> <a href="./list_190.html">潮</a> <a href="./list_191.html">泥</a> <a
+      href="./list_192.html">沙</a> </p>
+  <p><span class="tt">四大名著</span><a href="./tag_1.html">红楼梦</a> <a href="./tag_2.html">三国演义</a> <a
+      href="./tag_3.html">水浒传</a> <a href="./tag_4.html">西游记</a> </p>
+  <p><span class="tt">二十四史</span><a href="./tag_5.html">史记</a> <a href="./tag_6.html">汉书</a> <a
+      href="./tag_7.html">后汉书</a> <a href="./tag_8.html">三国志</a> <a href="./tag_9.html">晋书</a> <a
+      href="./tag_10.html">宋书</a> <a href="./tag_11.html">南齐书</a> <a href="./tag_12.html">梁书</a> <a
+      href="./tag_13.html">陈书</a> <a href="./tag_14.html">魏书</a> <a href="./tag_15.html">北齐书</a> <a
+      href="./tag_16.html">周书</a> <a href="./tag_17.html">隋书</a> <a href="./tag_18.html">南史</a> <a
+      href="./tag_19.html">北史</a> <a href="./tag_20.html">旧唐书</a> <a href="./tag_21.html">新唐书</a> <a
+      href="./tag_22.html">旧五代史</a> <a href="./tag_23.html">新五代史</a> <a href="./tag_24.html">宋史</a> <a
+      href="./tag_25.html">辽史</a> <a href="./tag_26.html">金史</a> <a href="./tag_27.html">元史</a> <a
+      href="./tag_28.html">明史</a> </p>
+  <p><span class="tt">四书五经</span><a href="./tag_29.html">大学</a> <a href="./tag_30.html">中庸</a> <a
+      href="./tag_31.html">论语</a> <a href="./tag_32.html">孟子</a> <a href="./tag_33.html">诗经</a> <a
+      href="./tag_34.html">尚书</a> <a href="./tag_35.html">礼记</a> <a href="./tag_36.html">周易</a> <a
+      href="./tag_37.html">春秋</a> </p>
+  <p><span class="tt">诸子百家</span><a href="./tag_38.html">孔子</a> <a href="./tag_39.html">老子</a> <a
+      href="./tag_40.html">庄子</a> <a href="./tag_32.html">孟子</a> <a href="./tag_41.html">墨子</a> <a
+      href="./tag_42.html">荀子</a> <a href="./tag_43.html">韩非子</a> <a href="./tag_44.html">淮南子</a> <a
+      href="./tag_45.html">管子</a> <a href="./tag_46.html">列子</a> <a href="./tag_47.html">孙子</a> <a
+      href="./tag_48.html">文子</a> <a href="./tag_49.html">吴子</a> <a href="./tag_50.html">尸子</a> <a
+      href="./tag_51.html">鬼谷子</a> <a href="./tag_52.html">鹖冠子</a> <a href="./tag_53.html">关尹子</a> <a
+      href="./tag_54.html">文中子</a> <a href="./tag_55.html">邓析子</a> </p>
+  <p><span class="tt">明清小说</span><a href="./tag_56.html">金瓶梅</a> <a href="./tag_57.html">醒世恒言</a> <a
+      href="./tag_58.html">警世通言</a> <a href="./tag_59.html">喻世明言</a> <a href="./tag_60.html">东周列国志</a> <a
+      href="./tag_61.html">初刻拍案惊奇</a> <a href="./tag_62.html">二刻拍案惊奇</a> <a href="./tag_63.html">禅真逸史</a> <a
+      href="./tag_64.html">杨家将演义</a> <a href="./tag_65.html">封神演义</a> <a href="./tag_66.html">镜花缘</a> <a
+      href="./tag_67.html">聊斋志异</a> <a href="./tag_68.html">三侠五义</a> <a href="./tag_69.html">小五义</a> <a
+      href="./tag_70.html">济公全传</a> <a href="./tag_71.html">说岳全传</a> <a href="./tag_72.html">绿野仙踪</a> <a
+      href="./tag_73.html">隋唐演义</a> <a href="./tag_74.html">孽海花</a> <a href="./tag_75.html">老残游记</a> <a
+      href="./tag_76.html">儒林外史</a> <a href="./tag_77.html">官场现形记</a> </p>
+  <p><span class="tt">诗词大家</span><a href="./tag_333.html">李白</a> <a href="./tag_324.html">杜甫</a> <a
+      href="./tag_318.html">白居易</a> <a href="./tag_617.html">李贺</a> <a href="./tag_423.html">陈子昂</a> <a
+      href="./tag_375.html">王勃</a> <a href="./tag_590.html">王维</a> <a href="./tag_377.html">刘禹锡</a> <a
+      href="./tag_464.html">曹操</a> <a href="./tag_768.html">李世民</a> <a href="./tag_649.html">李煜</a> <a
+      href="./tag_420.html">李商隐</a> <a href="./tag_396.html">杜牧</a> <a href="./tag_289.html">韩愈</a> <a
+      href="./tag_358.html">柳宗元</a> <a href="./tag_331.html">欧阳修</a> <a href="./tag_532.html">苏洵</a> <a
+      href="./tag_291.html">苏轼</a> <a href="./tag_454.html">苏辙</a> <a href="./tag_379.html">王安石</a> <a
+      href="./tag_404.html">曾巩</a> <a href="./tag_625.html">李清照</a> <a href="./tag_359.html">辛弃疾</a> <a
+      href="./tag_311.html">关汉卿</a> <a href="./tag_345.html">马致远</a> <a href="./tag_474.html">郑光祖</a> <a
+      href="./tag_517.html">白朴</a> <a href="./tag_400.html">杨炯</a> <a href="./tag_597.html">卢照邻</a> <a
+      href="./tag_555.html">骆宾王</a> <a href="./tag_659.html">徐渭</a> <a href="./tag_455.html">杨慎</a> </p>
+  <p><span class="tt">成语结构</span><a href="./jiegou_1.html">联合式</a> <a href="./jiegou_2.html">主谓式</a> <a
+      href="./jiegou_3.html">复句式</a> <a href="./jiegou_4.html">紧缩式</a> <a href="./jiegou_5.html">偏正式</a> <a
+      href="./jiegou_6.html">动宾式</a> <a href="./jiegou_7.html">连动式</a> <a href="./jiegou_8.html">复杂式</a> <a
+      href="./jiegou_9.html">补充式</a> </p>
+  <p><span class="tt">成语字数</span><a href="./zishu_3.html">三字</a> <a href="./zishu_4.html">四字</a> <a
+      href="./zishu_5.html">五字</a> <a href="./zishu_6.html">六字</a> <a href="./zishu_7.html">七字</a> <a
+      href="./zishu_8.html">八字</a> <a href="./zishu_9.html">九字</a> <a href="./zishu_10.html">十字</a> <a
+      href="./zishu_11.html">十一字</a> <a href="./zishu_12.html">十二字</a> </p>
+  <p><span class="tt">成语首拼</span><a href="./pinyin_a.html">A</a> <a href="./pinyin_b.html">B</a> <a
+      href="./pinyin_c.html">C</a> <a href="./pinyin_d.html">D</a> <a href="./pinyin_e.html">E</a> <a
+      href="./pinyin_f.html">F</a> <a href="./pinyin_g.html">G</a> <a href="./pinyin_h.html">H</a> <a
+      href="./pinyin_j.html">J</a> <a href="./pinyin_k.html">K</a> <a href="./pinyin_l.html">L</a> <a
+      href="./pinyin_m.html">M</a> <a href="./pinyin_n.html">N</a> <a href="./pinyin_o.html">O</a> <a
+      href="./pinyin_p.html">P</a> <a href="./pinyin_q.html">Q</a> <a href="./pinyin_r.html">R</a> <a
+      href="./pinyin_s.html">S</a> <a href="./pinyin_t.html">T</a> <a href="./pinyin_w.html">W</a> <a
+      href="./pinyin_x.html">X</a> <a href="./pinyin_y.html">Y</a> <a href="./pinyin_z.html">Z</a> </p>
 </div>
 
 {% endblock %}

@@ -9,7 +9,7 @@ import urllib.request
 import urllib.parse
 import json
 from datetime import datetime
-from app.model import Bing
+from app.model.bing import Bing
 
 
 def spider_bing():

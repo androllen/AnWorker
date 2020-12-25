@@ -17,3 +17,23 @@ p.card-text {
   -webkit-line-clamp: 2;
   /*显示行数*/
 }
+
+.cart-font{
+  font-size: 14px;
+  padding: 10px;
+  text-indent: 0;
+}
+p{
+  line-height: 24px;
+}
+span.tt, span.tt a {
+    display: inline-block;
+    width: 65px;
+    color: #008000;
+    text-decoration: none;
+}
+
+a{
+  color: #333;
+  outline: none;
+}
