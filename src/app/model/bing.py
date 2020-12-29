@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-#
+# http://www.pythondoc.com/flask-sqlalchemy/binds.html
+# http://www.pythondoc.com/flask-sqlalchemy/api.html
 # Time: 2020/01/10 18:05:25
 # Contact: androllen#hotmail.com
 

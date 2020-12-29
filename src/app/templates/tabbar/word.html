@@ -1,6 +1,396 @@
 {% extends "base.html" %}
 
+{% block head %}
+{{ super() }}
+<style type="text/css">
+  .gclear {
+    zoom: 1;
+  }
+
+  .gclear:after {
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+    content: '';
+  }
+
+  ul.zi {
+    margin: 0 25px 5px;
+  }
+
+  ul {
+    zoom: 1;
+  }
+
+  ul,
+  ol,
+  menu {
+    list-style: none;
+  }
+
+  ul {
+    padding: 0;
+  }
+
+  ul.zi li {
+    width: 62px;
+    float: left;
+    padding: 4px 5px;
+    position: relative;
+  }
+
+  ul.zi li {
+    font-family: SimSun, "\5B8B\4F53";
+  }
+
+  li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+  }
+
+
+  ul.zi li a {
+    font-size: 24px;
+    text-decoration: none;
+    width: 100%;
+    border: 1px solid #dedede;
+    float: left;
+    display: block;
+    padding: 5px 0 6px;
+    text-align: center;
+  }
+
+  a {
+    color: #333;
+    outline: none;
+  }
+
+  a:-webkit-any-link {
+    cursor: pointer;
+  }
+
+  ul.zi li a span {
+    font-size: 14px;
+    display: block;
+    height: 22px;
+    color: #999;
+  }
+
+  ul.zi li span {
+    font-family: Helvetica, Tahoma, Arial;
+  }
+
+  ul:after {
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+    content: '';
+  }
+
+  .ml {
+    margin-left: 30px;
+  }
+
+  h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-style: normal;
+    font-weight: bold;
+  }
+
+  .greenh {
+    color: #008000;
+  }
+
+  .f14,
+  .f14 a {
+    font-size: 14px;
+  }
+  .gclear .zi .bh{
+    padding: 5px 0 6px;
+  }
+</style>
+{% endblock %}
 
 {% block content %}
+
+
+<div>
+  <div class="gclear ml greenh f14">
+    <h3>笔画查字</h3>
+  </div>
+  <div class="gclear">
+    <ul class="zi">
+      <li><a class="bh" href="./bihua_1.html">1画</a></li>
+      <li><a class="bh" href="./bihua_2.html">2画</a></li>
+      <li><a href="./bihua_3.html">3画</a></li>
+      <li><a href="./bihua_4.html">4画</a></li>
+      <li><a href="./bihua_5.html">5画</a></li>
+      <li><a href="./bihua_6.html">6画</a></li>
+      <li><a href="./bihua_7.html">7画</a></li>
+      <li><a href="./bihua_8.html">8画</a></li>
+      <li><a href="./bihua_9.html">9画</a></li>
+      <li><a href="./bihua_10.html">10画</a></li>
+      <li><a href="./bihua_11.html">11画</a></li>
+      <li><a href="./bihua_12.html">12画</a></li>
+      <li><a href="./bihua_13.html">13画</a></li>
+      <li><a href="./bihua_14.html">14画</a></li>
+      <li><a href="./bihua_15.html">15画</a></li>
+      <li><a href="./bihua_16.html">16画</a></li>
+      <li><a href="./bihua_17.html">17画</a></li>
+      <li><a href="./bihua_18.html">18画</a></li>
+      <li><a href="./bihua_19.html">19画</a></li>
+      <li><a href="./bihua_20.html">20画</a></li>
+      <li><a href="./bihua_21.html">21画</a></li>
+      <li><a href="./bihua_22.html">22画</a></li>
+      <li><a href="./bihua_23.html">23画</a></li>
+      <li><a href="./bihua_24.html">24画</a></li>
+      <li><a href="./bihua_25.html">25画</a></li>
+      <li><a href="./bihua_26.html">26画</a></li>
+      <li><a href="./bihua_27.html">27画</a></li>
+      <li><a href="./bihua_28.html">28画</a></li>
+      <li><a href="./bihua_29.html">29画</a></li>
+      <li><a href="./bihua_30.html">30画</a></li>
+      <li><a href="./bihua_31.html">31画</a></li>
+      <li><a href="./bihua_32.html">32画</a></li>
+      <li><a href="./bihua_33.html">33画</a></li>
+      <li><a href="./bihua_34.html">34画</a></li>
+      <li><a href="./bihua_35.html">35画</a></li>
+      <li><a href="./bihua_36.html">36画</a></li>
+      <li><a href="./bihua_37.html">37画</a></li>
+      <li><a href="./bihua_38.html">38画</a></li>
+      <li><a href="./bihua_39.html">39画</a></li>
+      <li><a href="./bihua_40.html">40画</a></li>
+      <li><a href="./bihua_41.html">41画</a></li>
+      <li><a href="./bihua_42.html">42画</a></li>
+      <li><a href="./bihua_44.html">44画</a></li>
+      <li><a href="./bihua_45.html">45画</a></li>
+      <li><a class="bh" href="./bihua_47.html">47画</a></li>
+      <li><a href="./bihua_48.html">48画</a></li>
+      <li><a href="./bihua_49.html">49画</a></li>
+      <li><a href="./bihua_51.html">51画</a></li>
+      <li><a href="./bihua_52.html">52画</a></li>
+      <li><a href="./bihua_53.html">53画</a></li>
+      <li><a href="./bihua_64.html">64画</a></li>
+    </ul>
+  </div>
+  <div class="gclear ml greenh f14">
+    <h3>偏旁部首 一画</h3>
+  </div>
+
+  <div class="gclear">
+    <ul class="zi">
+      <li><a href="./bushou_gunzipang.html" target="_blank"><span>gǔn</span>丨</a></li>
+      <li><a href="./bushou_juezipang.html" target="_blank"><span>jué</span>亅</a></li>
+      <li><a href="./bushou_piezipang.html" target="_blank"><span>piě</span>丿</a></li>
+      <li><a href="./bushou_zhezipang.html" target="_blank"><span>yǐ</span>乛</a></li>
+      <li><a href="./bushou_yizipang.html" target="_blank"><span>yī</span>一</a></li>
+      <li><a href="./bushou_yizipang2.html" target="_blank"><span>yǐ</span>乙</a></li>
+      <li><a href="./bushou_haozipang.html" target="_blank"><span>háo</span>乚</a></li>
+      <li><a href="./bushou_zhuzipang.html" target="_blank"><span>zhǔ</span>丶</a></li>
+    </ul>
+  </div>
+
+  <div class="gclear ml greenh f14">
+    <h3>偏旁部首 二画</h3>
+  </div>
+  <div class="gclear">
+    <ul class="zi">
+      <li><a href="./bushou_bazipang.html" target="_blank"><span>bā</span>八</a></li>
+      <li><a href="./bushou_baozitou.html" target="_blank"><span>bāo</span>勹</a></li>
+      <li><a href="./bushou_bizipang.html" target="_blank"><span>bǐ</span>匕</a></li>
+      <li><a href="./bushou_liangdianshui.html" target="_blank"><span>bīng</span>冫</a></li>
+      <li><a href="./bushou_buzipang.html" target="_blank"><span>bǔ</span>卜</a></li>
+      <li><a href="./bushou_changzipang.html" target="_blank"><span>chǎng</span>厂</a></li>
+      <li><a href="./bushou_daozipang.html" target="_blank"><span>dāo</span>刀</a></li>
+      <li><a href="./bushou_lidaopang.html" target="_blank"><span>dāo</span>刂</a></li>
+      <li><a href="./bushou_erzipang.html" target="_blank"><span>ér</span>儿</a></li>
+      <li><a href="./bushou_erzipang2.html" target="_blank"><span>èr</span>二</a></li>
+      <li><a href="./bushou_sankuanger.html" target="_blank"><span>fāng</span>匚</a></li>
+      <li><a href="./bushou_shuangerdao.html" target="_blank"><span>fǔ</span>阝</a></li>
+      <li><a href="./bushou_bazipang2.html" target="_blank"><span>bā</span>丷</a></li>
+      <li><a href="./bushou_jizipang.html" target="_blank"><span>jǐ</span>几</a></li>
+      <li><a href="./bushou_shanerdao.html" target="_blank"><span>jié</span>卩</a></li>
+      <li><a href="./bushou_tongzikuang.html" target="_blank"><span>jiōng</span>冂</a></li>
+      <li><a href="./bushou_lizipang.html" target="_blank"><span>lì</span>力</a></li>
+      <li><a href="./bushou_tubaogai.html" target="_blank"><span>mì</span>冖</a></li>
+      <li><a href="./bushou_kanzidi.html" target="_blank"><span>kǎn</span>凵</a></li>
+      <li><a href="./bushou_renzitou.html" target="_blank"><span>rén</span>人</a></li>
+      <li><a href="./bushou_danrenpang.html" target="_blank"><span>rén</span>亻</a></li>
+      <li><a href="./bushou_ruzipang.html" target="_blank"><span>rù</span>入</a></li>
+      <li><a href="./bushou_shizier.html" target="_blank"><span>shí</span>十</a></li>
+      <li><a href="./bushou_sizier.html" target="_blank"><span>sī</span>厶</a></li>
+      <li><a href="./bushou_touzipang.html" target="_blank"><span>tóu</span>亠</a></li>
+      <li><a href="./bushou_xizipang.html" target="_blank"><span>xì</span>匸</a></li>
+      <li><a href="./bushou_yanzipang.html" target="_blank"><span>yán</span>讠</a></li>
+      <li><a href="./bushou_jianzipang.html" target="_blank"><span>yǐn</span>廴</a></li>
+      <li><a href="./bushou_youzipang.html" target="_blank"><span>yòu</span>又</a></li>
+      <li><a href="./bushou_jiezipang.html" target="_blank"><span>jié</span>㔾</a></li>
+    </ul>
+  </div>
+  <div class="gclear ml greenh f14">
+    <h3>偏旁部首 三画</h3>
+  </div>
+  <div class="gclear">
+    <ul class="zi">
+      <li><a href="./bushou_caozitou.html" target="_blank"><span>ǎo</span>艹</a></li>
+      <li><a href="./bushou_chezipang.html" target="_blank"><span>chè</span>屮</a></li>
+      <li><a href="./bushou_shuangrenpang.html" target="_blank"><span>chì</span>彳</a></li>
+      <li><a href="./bushou_chuanzipang.html" target="_blank"><span>chuān</span>巛</a></li>
+      <li><a href="./bushou_chuanzipang2.html" target="_blank"><span>chuān</span>川</a></li>
+      <li><a href="./bushou_zouzhipang.html" target="_blank"><span>chuò</span>辶</a></li>
+      <li><a href="./bushou_cunzipang.html" target="_blank"><span>cùn</span>寸</a></li>
+      <li><a href="./bushou_dazitou.html" target="_blank"><span>dà</span>大</a></li>
+      <li><a href="./bushou_feizipang.html" target="_blank"><span>fēi</span>飞</a></li>
+      <li><a href="./bushou_ganzipang.html" target="_blank"><span>gān</span>干</a></li>
+      <li><a href="./bushou_gongzipang.html" target="_blank"><span>gōng</span>工</a></li>
+      <li><a href="./bushou_gongzipang2.html" target="_blank"><span>gōng</span>弓</a></li>
+      <li><a href="./bushou_gongzipang3.html" target="_blank"><span>gǒng</span>廾</a></li>
+      <li><a href="./bushou_guangzipang.html" target="_blank"><span>guǎng</span>广</a></li>
+      <li><a href="./bushou_jizipang2.html" target="_blank"><span>jǐ</span>己</a></li>
+      <li><a href="./bushou_jizipang3.html" target="_blank"><span>jì</span>彐</a></li>
+      <li><a href="./bushou_jizipang4.html" target="_blank"><span>jì</span>彑</a></li>
+      <li><a href="./bushou_jinzipang.html" target="_blank"><span>jīn</span>巾</a></li>
+      <li><a href="./bushou_kouzipang.html" target="_blank"><span>kǒu</span>口</a></li>
+      <li><a href="./bushou_mazipang.html" target="_blank"><span>mǎ</span>马</a></li>
+      <li><a href="./bushou_menzikuang.html" target="_blank"><span>mén</span>门</a></li>
+      <li><a href="./bushou_baogaier.html" target="_blank"><span>mián</span>宀</a></li>
+      <li><a href="./bushou_nuzipang.html" target="_blank"><span>nǚ</span>女</a></li>
+      <li><a href="./bushou_fanquanpang.html" target="_blank"><span>quǎn</span>犭</a></li>
+      <li><a href="./bushou_shanzipang.html" target="_blank"><span>shān</span>山</a></li>
+      <li><a href="./bushou_sanpieer.html" target="_blank"><span>shān</span>彡</a></li>
+      <li><a href="./bushou_shizitou.html" target="_blank"><span>shī</span>尸</a></li>
+      <li><a href="./bushou_shizipang.html" target="_blank"><span>shí</span>饣</a></li>
+      <li><a href="./bushou_shizipang2.html" target="_blank"><span>shì</span>士</a></li>
+      <li><a href="./bushou_tishoupang.html" target="_blank"><span>shǒu</span>扌</a></li>
+      <li><a href="./bushou_sandianshui.html" target="_blank"><span>shuǐ</span>氵</a></li>
+      <li><a href="./bushou_jiaosipang.html" target="_blank"><span>sī</span>纟</a></li>
+      <li><a href="./bushou_sizipang.html" target="_blank"><span>sì</span>巳</a></li>
+      <li><a href="./bushou_titupang.html" target="_blank"><span>tǔ</span>土</a></li>
+      <li><a href="./bushou_fangkuanger.html" target="_blank"><span>wéi</span>囗</a></li>
+      <li><a href="./bushou_wuzipang.html" target="_blank"><span>wù</span>兀</a></li>
+      <li><a href="./bushou_xizipang2.html" target="_blank"><span>xī</span>夕</a></li>
+      <li><a href="./bushou_xiaozitou.html" target="_blank"><span>xiǎo</span>小</a></li>
+      <li><a href="./bushou_shuxinpang.html" target="_blank"><span>xīn</span>忄</a></li>
+      <li><a href="./bushou_yaozipang.html" target="_blank"><span>yāo</span>幺</a></li>
+      <li><a href="./bushou_yizipang3.html" target="_blank"><span>yì</span>弋</a></li>
+      <li><a href="./bushou_wangzipang.html" target="_blank"><span>yóu</span>尢</a></li>
+      <li><a href="./bushou_zhizipang.html" target="_blank"><span>zhǐ</span>夂</a></li>
+      <li><a href="./bushou_zizipang.html" target="_blank"><span>zǐ</span>子</a></li>
+      <li><a href="./bushou_panzipang2.html" target="_blank"><span>pán</span>丬</a></li>
+      <li><a href="./bushou_suizipang.html" target="_blank"><span>suī</span>夊</a></li>
+    </ul>
+  </div>
+  <div class="gclear ml greenh f14">
+    <h3>偏旁部首 四画</h3>
+  </div>
+  <div class="gclear">
+    <ul class="zi">
+      <li><a href="./bushou_beizipang.html" target="_blank"><span>bèi</span>贝</a></li>
+      <li><a href="./bushou_bizipang2.html" target="_blank"><span>bǐ</span>比</a></li>
+      <li><a href="./bushou_sidiande.html" target="_blank"><span>huǒ</span>灬</a></li>
+      <li><a href="./bushou_changzipang2.html" target="_blank"><span>cháng</span>长</a></li>
+      <li><a href="./bushou_chezipang2.html" target="_blank"><span>chē</span>车</a></li>
+      <li><a href="./bushou_daizipang.html" target="_blank"><span>dǎi</span>歹</a></li>
+      <li><a href="./bushou_douzipang.html" target="_blank"><span>dǒu</span>斗</a></li>
+      <li><a href="./bushou_ezipang.html" target="_blank"><span>è</span>厄</a></li>
+      <li><a href="./bushou_fangzipang.html" target="_blank"><span>fāng</span>方</a></li>
+      <li><a href="./bushou_fengzipang.html" target="_blank"><span>fēng</span>风</a></li>
+      <li><a href="./bushou_fuzitou.html" target="_blank"><span>fù</span>父</a></li>
+      <li><a href="./bushou_gezipang.html" target="_blank"><span>gē</span>戈</a></li>
+      <li><a href="./bushou_guanzipang.html" target="_blank"><span>guàn</span>卝</a></li>
+      <li><a href="./bushou_huzipang.html" target="_blank"><span>hù</span>户</a></li>
+      <li><a href="./bushou_huozipang.html" target="_blank"><span>huǒ</span>火</a></li>
+      <li><a href="./bushou_jizipang5.html" target="_blank"><span>jì</span>旡</a></li>
+      <li><a href="./bushou_jianzipang2.html" target="_blank"><span>jiàn</span>见</a></li>
+      <li><a href="./bushou_jinzitou.html" target="_blank"><span>jīn</span>斤</a></li>
+      <li><a href="./bushou_laozitou.html" target="_blank"><span>lǎo</span>耂</a></li>
+      <li><a href="./bushou_maozipang.html" target="_blank"><span>máo</span>毛</a></li>
+      <li><a href="./bushou_muzipang.html" target="_blank"><span>mù</span>木</a></li>
+      <li><a href="./bushou_yuzipang.html" target="_blank"><span>yù</span>肀</a></li>
+      <li><a href="./bushou_niuzipang.html" target="_blank"><span>niú</span>牛</a></li>
+      <li><a href="./bushou_niuzipang2.html" target="_blank"><span>niú</span>牜</a></li>
+      <li><a href="./bushou_panzipang.html" target="_blank"><span>pán</span>爿</a></li>
+      <li><a href="./bushou_pianzipang.html" target="_blank"><span>piàn</span>片</a></li>
+      <li><a href="./bushou_puzipang.html" target="_blank"><span>pū</span>攴</a></li>
+      <li><a href="./bushou_fanwenpang.html" target="_blank"><span>pū</span>攵</a></li>
+      <li><a href="./bushou_qizipang.html" target="_blank"><span>qì</span>气</a></li>
+      <li><a href="./bushou_qianzipang.html" target="_blank"><span>qiàn</span>欠</a></li>
+      <li><a href="./bushou_quanzipang.html" target="_blank"><span>quǎn</span>犬</a></li>
+      <li><a href="./bushou_rizipang.html" target="_blank"><span>rì</span>日</a></li>
+      <li><a href="./bushou_shizipang3.html" target="_blank"><span>shì</span>氏</a></li>
+      <li><a href="./bushou_shizipang4.html" target="_blank"><span>shì</span>礻</a></li>
+      <li><a href="./bushou_shouzipang.html" target="_blank"><span>shǒu</span>手</a></li>
+      <li><a href="./bushou_shuzipang.html" target="_blank"><span>shū</span>殳</a></li>
+      <li><a href="./bushou_shuizipang.html" target="_blank"><span>shuǐ</span>水</a></li>
+      <li><a href="./bushou_wazipang.html" target="_blank"><span>wǎ</span>瓦</a></li>
+      <li><a href="./bushou_wangzipang2.html" target="_blank"><span>wāng</span>尣</a></li>
+      <li><a href="./bushou_wangzipang3.html" target="_blank"><span>wáng</span>王</a></li>
+      <li><a href="./bushou_weizipang.html" target="_blank"><span>wéi</span>韦</a></li>
+      <li><a href="./bushou_wenzipang.html" target="_blank"><span>wén</span>文</a></li>
+      <li><a href="./bushou_wuzipang2.html" target="_blank"><span>wú</span>毋</a></li>
+      <li><a href="./bushou_xinzipang.html" target="_blank"><span>xīn</span>心</a></li>
+      <li><a href="./bushou_yazipang2.html" target="_blank"><span>yá</span>牙</a></li>
+      <li><a href="./bushou_yaozipang2.html" target="_blank"><span>yáo</span>爻</a></li>
+      <li><a href="./bushou_maozitou.html" target="_blank"><span>yuē</span>曰</a></li>
+      <li><a href="./bushou_yuezipang.html" target="_blank"><span>yuè</span>月</a></li>
+      <li><a href="./bushou_zhuazitou.html" target="_blank"><span>zhuǎ</span>爫</a></li>
+      <li><a href="./bushou_zhizipang2.html" target="_blank"><span>zhī</span>支</a></li>
+      <li><a href="./bushou_zhizipang3.html" target="_blank"><span>zhǐ</span>止</a></li>
+      <li><a href="./bushou_zhuazipang.html" target="_blank"><span>zhuǎ</span>爪</a></li>
+      <li><a href="./bushou_wuzipang3.html" target="_blank"><span>wú</span>无</a></li>
+    </ul>
+  </div>
+  <div class="gclear ml greenh f14">
+    <h3>偏旁部首 五画</h3>
+  </div>
+
+  <div class="gclear ml greenh f14">
+    <h3>偏旁部首 六画</h3>
+  </div>
+
+  <div class="gclear ml greenh f14">
+    <h3>偏旁部首 七画</h3>
+  </div>
+  <div class="gclear ml greenh f14">
+    <h3>偏旁部首 八画</h3>
+  </div>
+
+  <div class="gclear ml greenh f14">
+    <h3>偏旁部首 九画</h3>
+  </div>
+
+  <div class="gclear ml greenh f14">
+    <h3>偏旁部首 十画</h3>
+  </div>
+  <div class="gclear ml greenh f14">
+    <h3>偏旁部首 十一画</h3>
+  </div>
+
+  <div class="gclear ml greenh f14">
+    <h3>偏旁部首 十二画</h3>
+  </div>
+
+  <div class="gclear ml greenh f14">
+    <h3>偏旁部首 十三画</h3>
+  </div>
+  <div class="gclear ml greenh f14">
+    <h3>偏旁部首 十四画</h3>
+  </div>
+
+  <div class="gclear ml greenh f14">
+    <h3>偏旁部首 十五画</h3>
+  </div>
+
+  <div class="gclear ml greenh f14">
+    <h3>偏旁部首 十六画</h3>
+  </div>
+  <div class="gclear ml greenh f14">
+    <h3>偏旁部首 十七画</h3>
+  </div>
+</div>
 
 {% endblock %}
