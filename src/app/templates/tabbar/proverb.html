@@ -3,170 +3,83 @@
 {% block head %}
 <style>
   .flex-container {
-    background-color: #F4F7F8;
     overflow: auto;
     display: flex;
     margin: 1em;
   }
 
-  #itemlist {
-    display: flex;
-    flex-flow: row wrap;
-     /* flex-wrap: wrap;
-    flex-direction: row; */
-    column-gap: 10px;
-    row-gap: 10px;
+  .auto {
+    flex: auto;
+    margin: 5px;
   }
 
-  #item {
-    background-color: turquoise;
-    padding: 0 10px 10px 10px;
-    /* 强制设置最小宽度 */
-    flex: 200px;
-    /* flex-basis: 200px; */
+  .none {
+    flex: none;
+    height: 40px;
+    padding: 12px 20px;
+    margin: 1em;
+    min-width: 0;
+  }
+
+  .form-control {
+    margin: 10px 0 10px 0;
+  }
+
+  .ml {
+    margin-left: 20px;
+  }
+
+  h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-style: normal;
+    font-weight: bold;
+  }
+
+  .greenh {
+    color: #008000;
+  }
+
+  .f14 {
+    font-size: 14px;
+  }
+
+  .list-group {
+    padding-left: 0;
+  }
+
+  .list-item {
+    position: relative;
+    display: block;
+    padding: .75rem 1.25rem;
+    margin-bottom: -1px;
+    background-color: #fff;
   }
 </style>
 {% endblock %}
 
 {% block content %}
 
-<div class="flex-container ">
-  <div id="itemlist">
-    <div id="item">
-      <div>
-        <p>First article</p>
-        <article>
-          So, this single declaration gives us everything we need — incredible, right? We have our multiple column
-          layout
-          with
-          equal-sized columns, and the columns are all the same height. This is because the default values given
-          to
-          flex
-          items
-          (the children of the flex container) are set up to solve common problems such as this.
-        </article>
-      </div>
+
+<div>
+  <div class="flex-container">
+    <div class="auto">
+      <input type="text" class="form-control" placeholder="歇后语关键词">
     </div>
-    <div id="item">
-      <div>
-        <p>Second article</p>
-        <article>
-          So, this single declaration gives us everything we need — incredible, right? We have our multiple column
-          layout
-          with
-          equal-sized columns, and the columns are all the same height. This is because the default values given
-          to
-          flex
-          items
-          (the children of the flex container) are set up to solve common problems such as this.
-        </article>
-      </div>
-    </div>
-    <div id="item">
-      <div>
-        <p>Third article</p>
-        <article>
-          So, this single declaration gives us everything we need — incredible, right? We have our multiple column
-          layout
-          with
-          equal-sized columns, and the columns are all the same height. This is because the default values given
-          to
-          flex
-          items
-          (the children of the flex container) are set up to solve common problems such as this.
-        </article>
-      </div>
-    </div>
-    <div id="item">
-      <div>
-        <p>First article</p>
-        <article>
-          So, this single declaration gives us everything we need — incredible, right? We have our multiple column
-          layout
-          with
-          equal-sized columns, and the columns are all the same height. This is because the default values given
-          to
-          flex
-          items
-          (the children of the flex container) are set up to solve common problems such as this.
-        </article>
-      </div>
-    </div>
-    <div id="item">
-      <div>
-        <p>Second article</p>
-        <article>
-          So, this single declaration gives us everything we need — incredible, right? We have our multiple column
-          layout
-          with
-          equal-sized columns, and the columns are all the same height. This is because the default values given
-          to
-          flex
-          items
-          (the children of the flex container) are set up to solve common problems such as this.
-        </article>
-      </div>
-    </div>
-    <div id="item">
-      <div>
-        <p>Third article</p>
-        <article>
-          So, this single declaration gives us everything we need — incredible, right? We have our multiple column
-          layout
-          with
-          equal-sized columns, and the columns are all the same height. This is because the default values given
-          to
-          flex
-          items
-          (the children of the flex container) are set up to solve common problems such as this.
-        </article>
-      </div>
-    </div>
-    <div id="item">
-      <div>
-        <p>First article</p>
-        <article>
-          So, this single declaration gives us everything we need — incredible, right? We have our multiple column
-          layout
-          with
-          equal-sized columns, and the columns are all the same height. This is because the default values given
-          to
-          flex
-          items
-          (the children of the flex container) are set up to solve common problems such as this.
-        </article>
-      </div>
-    </div>
-    <div id="item">
-      <div>
-        <p>Second article</p>
-        <article>
-          So, this single declaration gives us everything we need — incredible, right? We have our multiple column
-          layout
-          with
-          equal-sized columns, and the columns are all the same height. This is because the default values given
-          to
-          flex
-          items
-          (the children of the flex container) are set up to solve common problems such as this.
-        </article>
-      </div>
-    </div>
-    <div id="item">
-      <div>
-        <p>Third article</p>
-        <article>
-          So, this single declaration gives us everything we need — incredible, right? We have our multiple column
-          layout
-          with
-          equal-sized columns, and the columns are all the same height. This is because the default values given
-          to
-          flex
-          items
-          (the children of the flex container) are set up to solve common problems such as this.
-        </article>
-      </div>
-    </div>
+    <button type="submit" class="btn none btn-default">搜索</button>
+  </div>
+
+  <div class="ml greenh f14">
+    <h3>搜索结果:</h3>
+  </div>
+
+  <div>
+    <ul class="list-group">
+      {% for item in items %}
+      <li class="list-item">{{ item.content }}</li>
+      {% endfor %}
+    </ul>
   </div>
 </div>
 
