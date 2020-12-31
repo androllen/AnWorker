@@ -42,3 +42,5 @@ def three():
 @bp.route('/edubook')
 def edubook():
     return render_template('tabbar/poet-edubook.html', title='教科书', tasklist=Config.TabBar)           
+
+

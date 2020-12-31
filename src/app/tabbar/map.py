@@ -13,5 +13,5 @@ from app.config import Config
 
 
 @bp.route('/map')
-def game():
+def gomap():
     return render_template('tabbar/map.html', title='map', tasklist=Config.TabBar)
