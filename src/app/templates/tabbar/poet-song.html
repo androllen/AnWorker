@@ -11,8 +11,6 @@
   #itemlist {
     display: flex;
     flex-flow: row wrap;
-    /* flex-wrap: wrap;
-    flex-direction: row; */
     column-gap: 10px;
     row-gap: 10px;
   }
@@ -20,8 +18,6 @@
   #item {
     background-color: #f0efe2;
     padding: 0 10px 10px 10px;
-    /* 强制设置最小宽度 */
-    /* flex: 400px; */
     flex-basis: 534px;
   }
 
@@ -59,7 +55,7 @@
 <div class="flex-container ">
   <div id="itemlist">
     <div id="item">
-      {% for item in items %}
+      {% for item in posts.items %}
       <div>
         <p class="title"><b>{{ item.title }}</b></p>
         <p class="f14 author">

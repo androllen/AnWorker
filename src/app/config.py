@@ -14,6 +14,7 @@ class Config(object):
     DEBUG = True  # app.config["DEBUG"]
     EMAIL = "androllen#hotmail.com"
     TITLE = "-Wiki"
+    ARTISAN_POSTS_PER_PAGE= 30
     BASEDIR = os.path.dirname(APP_ROOT)
     # 数据库链接地址
     SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(BASEDIR, 'hots.db')

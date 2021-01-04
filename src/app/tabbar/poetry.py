@@ -8,6 +8,7 @@ from flask import render_template, make_response, send_from_directory
 from app import log
 from app.tabbar import bp
 from app.config import Config
+from app.model.song import Song
 
 @bp.route('/poetry')
 def poetry():
@@ -16,7 +17,8 @@ def poetry():
 
 @bp.route('/song')
 def song():
-    return render_template('tabbar/poet-song.html', title='宋词', tasklist=Config.TabBar)
+    model = Song()
+    return render_template('tabbar/poet-song.html', title='宋词', tasklist=Config.TabBar, posts=model.queryPerPage())
 
 
 @bp.route('/tang')

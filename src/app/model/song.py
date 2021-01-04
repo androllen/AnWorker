@@ -5,6 +5,7 @@
 # Contact: androllen#hotmail.com
 
 from app.exts import log, db
+from app.config import Config
 
 
 class Song(db.Model):
@@ -22,5 +23,5 @@ class Song(db.Model):
     dynasty = db.Column(db.Text, unique=True, nullable=False)
     
     def queryPerPage(self,page=1):
-        page = Song.query.paginate(page,per_page=30)
-        return page    
+        pagination = Song.query.paginate(page,per_page=Config.ARTISAN_POSTS_PER_PAGE)
+        return pagination    
