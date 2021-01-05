@@ -55,25 +55,39 @@
 </style>
 {% endblock %}
 
+{% import "pages.html" as pg %}
+
 {% block content %}
 
-<div class="flex-container ">
-  <div id="itemlist">
-    {% for item in posts.items %}
-    <div id="item">
-      <p class="title"><b>{{ item.title }}</b></p>
-      <p class="f14 author">
-        <span class="greenh">诗人</span>
-        {{item.author}}
-        <span class="greenh ml">朝代</span>
-        {{item.dynasty}}
-      </p>
-      <article class="content">
-        {{item.paragraphs}}
-      </article>
+<div>
+  <div class="flex-container ">
+    <div id="itemlist">
+      {% for item in posts %}
+      <div id="item">
+        <p class="title"><b>{{ item.title }}</b></p>
+        <p class="f14 author">
+          <span class="greenh">诗人</span>
+          {{item.author}}
+          <span class="greenh ml">朝代</span>
+          {{item.dynasty}}
+        </p>
+        <article class="content">
+          {{item.paragraphs}}
+        </article>
+      </div>
+      {% endfor %}
     </div>
-    {% endfor %}
+  </div>
+
+  <div>
+    <br>
+    总页数{{ (totalpage) }}
+    <br>
+    总共有{{ paginate.total }}条数据
+    <br>
+    当前页数：{{ paginate.page }}
+    <br>
+    <!-- {{pg.my_paginate(paginate, 'tabbar.song')}} -->
   </div>
 </div>
-
 {% endblock %}

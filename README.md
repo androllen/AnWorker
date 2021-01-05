@@ -50,5 +50,6 @@ pip freeze > requirements.txt
 py server.py
 ```
 
-[font-awesome](https://www.bootcss.com/p/font-awesome/#)
-[jQuery CDN ](https://code.jquery.com/)
+[font-awesome](https://www.bootcss.com/p/font-awesome/#)  
+[jQuery CDN ](https://code.jquery.com/)  
+[jinja2](http://docs.jinkan.org/docs/jinja2/)  

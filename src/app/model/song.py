@@ -6,7 +6,7 @@
 
 from app.exts import log, db
 from app.config import Config
-
+import math
 
 class Song(db.Model):
 
@@ -22,6 +22,14 @@ class Song(db.Model):
     paragraphs = db.Column(db.Text, unique=True, nullable=False)
     dynasty = db.Column(db.Text, unique=True, nullable=False)
     
-    def queryPerPage(self,page=1):
+    def queryPerPage(self,page):
         pagination = Song.query.paginate(page,per_page=Config.ARTISAN_POSTS_PER_PAGE)
         return pagination    
+    
+    def totalPage(self,pagination):
+        """
+        # totalpage为总页面数
+        """
+        totalpage = math.ceil(pagination.total/Config.ARTISAN_POSTS_PER_PAGE)
+        return totalpage
+        
