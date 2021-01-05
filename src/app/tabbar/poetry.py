@@ -6,8 +6,9 @@
 # Time: 2020/01/15 18:56:15
 # Contact: androllen#hotmail.com
 
-from flask import render_template,url_for
+from flask import render_template
 from app import log
+from app.model.tang import Tang
 from app.tabbar import bp
 from app.config import Config
 from app.model.song import Song
@@ -26,9 +27,14 @@ def song(page=None):
     totalpage = model.totalPage(paginates)
     return render_template('tabbar/poet-song.html', title='宋词', tasklist=Config.TabBar, paginate = paginates, posts = paginates.items, totalpage = totalpage)
 
-@bp.route('/tang')
-def tang():
-    return render_template('tabbar/poet-tang.html', title='唐诗', tasklist=Config.TabBar)   
+@bp.route('/tang/<int:page>')
+def tang(page=None):
+    if page is None:
+        page = 1  
+    model = Tang()
+    paginates = model.queryPerPage(page)
+    totalpage = model.totalPage(paginates)    
+    return render_template('tabbar/poet-tang.html', title='唐诗', tasklist=Config.TabBar, paginate = paginates, posts = paginates.items, totalpage = totalpage)   
 
 
 @bp.route('/sound')

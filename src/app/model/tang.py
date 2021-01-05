@@ -4,6 +4,8 @@
 # Time: 2020/12/25 11:02:00
 # Contact: androllen#hotmail.com
 
+import math
+from app.config import Config
 from app.exts import log, db
 
 
@@ -21,6 +23,14 @@ class Tang(db.Model):
     paragraphs = db.Column(db.Text, unique=True, nullable=False)
     dynasty = db.Column(db.Text, unique=True, nullable=False)
     
-    def queryPerPage(self,page=1):
-        page = Tang.query.paginate(page,per_page=30)
-        return page        
+    def queryPerPage(self,page):
+        pagination = Tang.query.paginate(page,per_page=Config.ARTISAN_POSTS_PER_PAGE)
+        return pagination    
+    
+    def totalPage(self,pagination):
+        """
+        # totalpage为总页面数
+        """
+        totalpage = math.ceil(pagination.total/Config.ARTISAN_POSTS_PER_PAGE)
+        return totalpage
+        
