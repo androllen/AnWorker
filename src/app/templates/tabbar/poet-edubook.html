@@ -1,11 +1,93 @@
 {% extends "base.html" %}
 
-{% block content %}
+{% block head %}
+<style>
+  .flex-container {
+    overflow: auto;
+    display: flex;
+    margin: 1em;
+  }
 
-hello14
+  #itemlist {
+    display: flex;
+    flex-flow: row wrap;
+    /* flex-wrap: wrap;
+    flex-direction: row; */
+    column-gap: 10px;
+    row-gap: 10px;
+  }
 
+  #item {
+    background-color: #f0efe2;
+    padding: 0 10px 10px 10px;
+    /* 强制设置最小宽度 */
+    /* flex: 400px; */
+    flex-basis: 534px;
+  }
+
+  .title {
+    font-size: x-large;
+    text-align: center;
+    margin: 10px 0 5px;
+  }
+
+  .author {
+    text-align: right;
+  }
+
+  .content {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .greenh {
+    color: #008000;
+  }
+
+  .f14,
+  .f14 a {
+    font-size: 14px;
+  }
+
+  .ml {
+    margin-left: 10px;
+  }
+</style>
 {% endblock %}
 
-{% block script %}
+{% import "pages.html" as pg %}
 
+{% block content %}
+
+<div>
+  <div class="flex-container ">
+    <div id="itemlist">
+      {% for item in posts %}
+      <div id="item">
+        <p class="title"><b>{{ item.title }}</b></p>
+        <p class="f14 author">
+          <span class="greenh">诗人</span>
+          {{item.author}}
+          <span class="greenh ml">朝代</span>
+          {{item.dynasty}}
+        </p>
+        <article class="content">
+          {{item.paragraphs}}
+        </article>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div>
+    <br>
+    总页数{{ (totalpage) }}
+    <br>
+    总共有{{ paginate.total }}条数据
+    <br>
+    当前页数：{{ paginate.page }}
+    <br>
+    {{pg.my_paginate(paginate, 'tabbar.edubook')}}
+  </div>
+</div>
 {% endblock %}

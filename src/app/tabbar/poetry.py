@@ -8,7 +8,11 @@
 
 from flask import render_template
 from app import log
+from app.model.edubook import EduBook
+from app.model.poet import Poet
+from app.model.sound import Sound
 from app.model.tang import Tang
+from app.model.three import Three
 from app.tabbar import bp
 from app.config import Config
 from app.model.song import Song
@@ -37,23 +41,43 @@ def tang(page=None):
     return render_template('tabbar/poet-tang.html', title='唐诗', tasklist=Config.TabBar, paginate = paginates, posts = paginates.items, totalpage = totalpage)   
 
 
-@bp.route('/sound')
-def sound():
-    return render_template('tabbar/poet-sound.html', title='声律', tasklist=Config.TabBar)
+@bp.route('/sound/<int:page>')
+def sound(page=None):
+    if page is None:
+        page = 1  
+    model = Sound()
+    paginates = model.queryPerPage(page)
+    totalpage = model.totalPage(paginates)       
+    return render_template('tabbar/poet-sound.html', title='声律', tasklist=Config.TabBar, paginate = paginates, posts = paginates.items, totalpage = totalpage)
 
 
-@bp.route('/poet')
-def poet():
-    return render_template('tabbar/poet-poet.html', title='诗经', tasklist=Config.TabBar)   
+@bp.route('/poet/<int:page>')
+def poet(page=None):
+    if page is None:
+        page = 1  
+    model = Poet()
+    paginates = model.queryPerPage(page)
+    totalpage = model.totalPage(paginates)         
+    return render_template('tabbar/poet-poet.html', title='诗经', tasklist=Config.TabBar, paginate = paginates, posts = paginates.items, totalpage = totalpage)   
 
 
-@bp.route('/three')
-def three():
-    return render_template('tabbar/poet-three.html', title='三字经', tasklist=Config.TabBar)
+@bp.route('/three/<int:page>')
+def three(page=None):
+    if page is None:
+        page = 1  
+    model = Three()
+    paginates = model.queryPerPage(page)
+    totalpage = model.totalPage(paginates)         
+    return render_template('tabbar/poet-three.html', title='三字经', tasklist=Config.TabBar, paginate = paginates, posts = paginates.items, totalpage = totalpage)
 
 
-@bp.route('/edubook')
-def edubook():
-    return render_template('tabbar/poet-edubook.html', title='教科书', tasklist=Config.TabBar)           
+@bp.route('/edubook/<int:page>')
+def edubook(page=None):
+    if page is None:
+        page = 1  
+    model = EduBook()
+    paginates = model.queryPerPage(page)
+    totalpage = model.totalPage(paginates)         
+    return render_template('tabbar/poet-edubook.html', title='教科书', tasklist=Config.TabBar, paginate = paginates, posts = paginates.items, totalpage = totalpage)           
 
 
