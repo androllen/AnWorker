@@ -55,8 +55,6 @@
 </style>
 {% endblock %}
 
-{% import "pages.html" as pg %}
-
 {% block content %}
 
 <div>
@@ -87,7 +85,20 @@
     <br>
     当前页数：{{ paginate.page }}
     <br>
-    <!-- {{pg.my_paginate(paginate, 'tabbar.song')}} -->
+    {#如果存在上一页#}
+    {% if paginate.has_prev %}
+    <a href="/song/{{ paginate.page-1}}">上一页:</a>
+    {% endif %}
+
+    {% for i in paginate.iter_pages(left_edge=paginate.pages) %}
+    <a href="/song/{{ i }}">{{ i }}</a>
+    {% endfor %}
+
+    {#如果存在下一页#}
+    {% if paginate.has_next %}
+    <a href="/song/{{ paginate.next_num }}">下一页:</a>
+    {% endif %}
+    <br>
   </div>
 </div>
 {% endblock %}
