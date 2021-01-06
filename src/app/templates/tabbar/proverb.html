@@ -45,23 +45,22 @@
     font-size: 14px;
   }
 
-  .list-group {
-    padding-left: 0;
+  #item {
+    background-color: #f0efe2;
+    flex-basis: 534px;
+    margin: 5px;
+    margin-left: 20px;
   }
 
-  .list-item {
-    position: relative;
-    display: block;
-    padding: .75rem 1.25rem;
-    margin-bottom: -1px;
-    background-color: #fff;
+  .content {
+    overflow: hidden;
+    padding: 10px;
+    text-overflow: ellipsis;
   }
 </style>
 {% endblock %}
 
 {% block content %}
-
-
 <div>
   <div class="flex-container">
     <div class="auto">
@@ -69,17 +68,18 @@
     </div>
     <button id="btn" type="submit" class="btn none btn-default">搜索</button>
   </div>
-
   <div class="ml greenh f14">
     <h3>搜索结果:</h3>
   </div>
 
   <div>
-    <ul class="list-group">
-      {% for item in items %}
-      <li class="list-item">{{ item.content }}</li>
-      {% endfor %}
-    </ul>
+    {% for item in posts %}
+    <div id="item">
+      <article class="content">
+        {{ item.riddle }} <b>---</b> {{item.answer}}
+      </article>
+    </div>
+    {% endfor %}
   </div>
 </div>
 
@@ -92,14 +92,13 @@
   function bindClickSearch() {
     $("#btn").click(function () {
       var searchkey = $("#key").val();
-      console.log(searchkey);
-      var data = "/getproverb/" + searchkey;
-      $.get(data, function () {
-        console.log("searchkey1");
-      });        
+      var data = "/proverb/?search=" + searchkey;
+      console.log(data);
+      location.replace(data);
+      $.get(data, function (item) {
+       console.log(item);
+      });
     });
-
-
   }
 </script>
 {% endblock %}

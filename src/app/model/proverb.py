@@ -5,7 +5,6 @@
 # Contact: androllen#hotmail.com
 
 from app.exts import log, db
-from app.config import Config
 
 class Proverb(db.Model):
 
@@ -19,10 +18,13 @@ class Proverb(db.Model):
     answer = db.Column(db.Text, nullable=False)
     
     def queryModel(self,key):
-        if key=='':
-            response =[]
-            return response 
-        list_key = Proverb.query.filter(Proverb.riddle.contains(key)).all()
+        list_key =[]
+        if len(key) == 0 :
+            return list_key 
+
+        list_key = Proverb.query.filter(Proverb.riddle.like(f"{key}%")).all()
+        # for target_list in list_key:
+        #     log.logger.info(target_list.answer)
         return list_key   
     
 

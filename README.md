@@ -44,9 +44,11 @@ pip install flask
 pip freeze > requirements.txt
 ```
 
-### start
+### build
 
 ```sh
+.\env\Scripts\activate
+cd src
 py server.py
 ```
 
