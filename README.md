@@ -72,7 +72,8 @@ py server.py
 [font-awesome](https://www.bootcss.com/p/font-awesome/#)  
 [jQuery CDN ](https://code.jquery.com/)  
 
+
 <br>
 <br>
-<p style="text-align: center;font-size: 12px;" >数据来源于<a href="https://github.com/chinese-poetry/huajianji">花间集</a></p>
-<p style="text-align: center;font-size: 12px;" >如果侵权请联系我删除</p>
+<p align="center">数据来源于<a href="https://github.com/chinese-poetry/huajianji">花间集</a></p>
+<p align="center">如果侵权请联系我删除</p>
