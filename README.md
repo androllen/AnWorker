@@ -2,6 +2,8 @@
 
 基于 `flask` 编写的 `web` 网站
 
+![](https://data-hz-pds.teambition.net/6010e5ac93d6c5284a7a44168c794f901687d89c%2F6010e5ac4263e65a59c24143a903fe880d5322dc?x-oss-access-key-id=LTAIsE5mAn2F493Q&x-oss-expires=1611734533&x-oss-signature=ofMEXoXj5SSBpZmvH6ddr%2F5E95akpHW%2FR19Wzv%2BuIvE%3D&x-oss-signature-version=OSS2)
+
 ### 包含
 
 - 多数据库读取
@@ -16,7 +18,7 @@
 
 - 成语大全与中华大词典 没有通过 `python` 爬取数据
 - 壁纸没有完成分页加载
-- 历史壁纸写入到数据库中
+- 壁纸历史记录未写入数据库中
 
 ### for Windows
 ``` bash
